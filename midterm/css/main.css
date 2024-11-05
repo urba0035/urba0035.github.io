@@ -64,22 +64,23 @@ html {
     /* the first number (0) is the padding value for top and bottom */
     /* padding is used in the wrapper for small screen devices in order to make sure the content isn't touching the edges of the screen */
     padding: 0 10px;
-
 	background-color: #D4E9E7;
 }
 
 body {
     font-family:Arial, Helvetica, sans-serif;
-	background-color: #AAD4CF;
+	background-color: #AAD4CF; 
 }
 
 header h1 {
     /* rem stands for root element font size */
     /* the number in front of it is a multiplication */
-    font-size: 3rem;
-    text-align: center;
+    font-size: 3.2rem;
+    color: white;
     position:absolute;
-
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h2, h3, h4 {
@@ -98,13 +99,13 @@ h3 {
 }
 
 h4 {
-    margin-top: 10px;
     font-size: 1.1rem;
 }
 
 .header-image {
-    width: 100%;
-    max-width: 100%;
+    /* after doing some research, I found the easiest way to extend the image to the length of my wrapper's padding would be to use the calculation function. It extends the image to 100% of the wrapper width and adds 20 px (10px on each side) to the total width.*/
+    width: calc(100% + 20px);
+    margin: 0 -10px;
 }
 
 .nav-menu ul {
@@ -115,13 +116,8 @@ h4 {
     justify-content: space-around;
 }
 
-.nav-menu li {
-    border-right: 5px black;
-    margin: 0;
-}
-
 .nav-menu a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: black;
     text-decoration: none;
     padding: 10px 20px;
@@ -132,9 +128,22 @@ h4 {
     color: blue;
 }
 
-.story-link { 
-    border-left: 2px solid black; 
-    border-right: 2px solid black; margin: 0 10px; 
+.nav-link {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.nav-link:first-child {
+    border-left: none;
+    border-right: none;
+}
+
+.nav-link:last-child {
+    border-left: none;
+    border-right: none;
 }
 
 article {
@@ -157,13 +166,6 @@ section ul {
     list-style:inside;
 }
 
-footer p {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    text-align: right;
-    padding-right: 18px;
-}
-
 form {
     border: 1px solid black;
 }
@@ -173,6 +175,10 @@ form {
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.full-name-label {
+    margin-top: 17px;
 }
   
 .form-entry {
@@ -216,7 +222,15 @@ form {
 #send-button {
     margin: 10px;
     margin-top: 10px;
-    padding:5px;
-    font-size: 0.7rem;
+    padding:10px;
+    font-size: 0.6rem;
     background-color: transparent;
+    border: 1px solid black;
+}
+
+footer p {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: right;
+    padding-right: 18px;
 }

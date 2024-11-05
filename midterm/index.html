@@ -9,17 +9,19 @@
 
 <body>
     <div class="wrapper">
-    <header>
+        <header>
             <h1>Lone Starfish</h1>
             <img class="header-image" src="images/lone-starfish-wide.jpg" alt="Header Image Of Starfish">
             <nav class="nav-menu"> 
                 <ul> 
-                    <li><a href="#home">HOME</a></li> <li><a class="story-link" href="#story">STORY</a></li> <li><a href="#contact">CONTACT</a></li> 
+                    <li class="nav-link"><a href="#home">HOME</a></li> 
+                    <li class="nav-link"><a class="story-link" href="#story">STORY</a></li> 
+                    <li class="nav-link"><a href="#contact">CONTACT</a></li> 
                 </ul> 
             </nav>
-    </header>
+        </header>
 
-    <main>
+        <main>
             <article>
                 <h2>
                     Life of a Starfish
@@ -59,20 +61,20 @@
                 </h3>
                     <form>
                         <div class="contact">
-                        <div class="form-entry">
-                            <label for="full-name">Your Name</label>
-                            <input id="full-name" name="full-name" type="text">
-                        </div>
+                            <div class="form-entry">
+                                <label for="full-name" class="full-name-label">Your Name</label>
+                                <input id="full-name" name="full-name" type="text">
+                            </div>
 
-                        <div class="form-entry">
-                            <label for="your-email">Your Email</label>
-                            <input id="your-email" name="your-email" type="email">
-                        </div>
+                            <div class="form-entry">
+                                <label for="your-email">Your Email</label>
+                                <input id="your-email" name="your-email" type="email">
+                            </div>
 
-                        <div class="form-entry">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message"></textarea>
-                        </div>
+                            <div class="form-entry">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message"></textarea>
+                            </div>
                         </div>
 
                         <div class="multiple-choices">
@@ -80,33 +82,30 @@
                             <div class="choices">
                                 <label for="option-yes">
                                 <input type="radio" id="option-yes" name="options" value="option-yes">
-                                Yes
-                                </label>
+                                Yes</label>
                             </div>
                             <div class="choices">
                                 <label for="option-no">
                                 <input type="radio" id="option-no" name="options" value="option-no">
-                                No
-                              </label>
+                                No</label>
                             </div>
                             <div class="choices">
                               <label for="option-maybe">
                                 <input type="radio" id="option-maybe" name="options" value="option-maybe">
-                                Maybe
-                              </label>
+                                Maybe</label>
                             </div>
-                            </div>
-                            <button id="send-button" type="submit">SEND</button>
-                        </form>
+                        </div>     
+                        <button id="send-button" type="submit">SEND</button>
+                    </form>
             </section>
-    </main>
+        </main>
 
-    <footer class ="footer">
-        <!-- always add the div tags inside of the header or footer tags -->
-        <div class = "wrapper">
-            <p>&copy; Lone Starfish.</p>
-        </div>
-    </footer>
-</div>
+        <footer class ="footer">
+            <!-- always add the div tags inside of the header or footer tags -->
+            <div class = "wrapper">
+                <p>&copy; Lone Starfish.</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
